@@ -1,0 +1,10 @@
+<%= simple_form_for @workout, :html => {:multipart => true} do |f| %>
+	
+	<%= f.input :date, label: "Date" %>
+	<%= f.input :workout, label: "Workout" %>
+	<%= f.input :mood, label: "Mood" %>
+	<%= f.input :length, label: "Length" %>
+	<%= f.button :submit, :class => "btn-custom2" %>
+
+
+<% end %>
