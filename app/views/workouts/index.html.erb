@@ -1,1 +1,17 @@
 <h1> This is workout index </h1>
+
+<div class = "container">
+	<div class = "row">
+		<div class = "col">
+			<% @workouts.each do |workout| %>
+
+			<div class="col-md-3">
+				<h2><%= workout.date %></h2>
+				<h4><%= workout.workout %></h4>
+				<h4><%= workout.mood %></h4>
+				<h4><%= workout.length %></h4>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
