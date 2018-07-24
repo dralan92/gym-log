@@ -32,6 +32,8 @@ class WorkoutsController < ApplicationController
 	end
 
 	def destroy
+		@workout.destroy
+		redirect_to root_path
 	end
 
 	private
