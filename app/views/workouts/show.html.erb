@@ -5,6 +5,8 @@
 			<h4><%= @workout.mood %></h4>
 			<h4><%= @workout.workout %></h4>
 			<h4><%= @workout.length %></h4>
+			<%= link_to "Back", root_path, class: "btn btn-custom" %>|
+			<%= link_to "Edit", edit_workout_path(@workout), class: "btn btn-custom" %>
 		</div>
 	</div>
 </div>
