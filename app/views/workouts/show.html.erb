@@ -1,14 +1,19 @@
-<div class = "container">
-	<div class = "row">
-		<div class = "col">
-			<h2><%= @workout.date %></h2>
-			<h4><%= @workout.mood %></h4>
-			<h4><%= @workout.workout %></h4>
-			<h4><%= @workout.length %></h4>
-			<%= link_to "Back", root_path, class: "btn btn-custom" %>|
-			<%= link_to "Edit", edit_workout_path(@workout), class: "btn btn-custom" %>|
-			<%= link_to "Delete", workout_path(@workout), class: "btn btn-custom", method: :delete, 
-					data: {confirm: "Are you sure?"} %>
+
+
+	<div class = "container">
+		<div class = "row">
+			<div class = "col">
+				<h2><%= @workout.date %></h2>
+				<h4><%= @workout.mood %></h4>
+				<h4><%= @workout.workout %></h4>
+				<h4><%= @workout.length %></h4>
+				<%= link_to "Back", root_path, class: "btn btn-custom" %>|
+				<%= link_to "Edit", edit_workout_path(@workout), class: "btn btn-custom" %>|
+				<%= link_to "Delete", workout_path(@workout), class: "btn btn-custom", method: :delete, 
+						data: {confirm: "Are you sure?"} %>
+			</div>
 		</div>
 	</div>
-</div>
+
+
+

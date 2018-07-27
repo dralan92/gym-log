@@ -1,17 +1,21 @@
-<h1> This is workout index </h1>
+
 
 
 <div class = "container">
 	<div class = "row">
 		<div class = "col">
 			<% @workouts.each do |workout| %>
-
-			<div class="col-md-3">
-				<a href = "/workouts/<%= workout.id %>"><h2><%= workout.date %></h2></a>
-				<h4><%= workout.workout %></h4>
-				<h4><%= workout.mood %></h4>
-				<h4><%= workout.length %></h4>
-			</div>
+				<% if user_signed_in? %>
+					<% if workout.user_id == current_user.id%>
+						<div class="col">
+							
+							<a href = "/workouts/<%= workout.id %>"><span><%= workout.date %></span></a>
+							<span><%= workout.workout %></span>
+							<span><%= workout.mood %></span>
+							<span><%= workout.length %></span>
+						</div>
+					<% end %>
+				<% end %>
 			<% end %>
 		</div>
 	</div>
